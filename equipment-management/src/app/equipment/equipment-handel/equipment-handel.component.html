@@ -1,0 +1,33 @@
+<div>
+    <form nz-form [formGroup]="getForm()" (ngSubmit)="submit()">
+        <nz-form-item>
+            <nz-form-label nzSm="6">model</nz-form-label>
+            <nz-form-control nzSm="16">
+                <input nz-input formControlName="model">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzSm="6">brand</nz-form-label>
+            <nz-form-control nzSm="16">
+                <input nz-input formControlName="brand">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzSm="6">weight</nz-form-label>
+            <nz-form-control nzSm="16">
+                <input nz-input formControlName="weight">
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label nzSm="6">manufactureDate</nz-form-label>
+            <nz-form-control nzSm="16">
+                <nz-date-picker formControlName="manufactureDate"></nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item nz-row>
+            <nz-form-control nzSpan="16" nzOffset="6">
+                <button nz-button nzType="primary">Save</button>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</div>

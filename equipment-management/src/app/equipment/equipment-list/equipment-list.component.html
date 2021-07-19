@@ -1,0 +1,25 @@
+<div>
+    <button nz-button nzType="primary" type="button" (click)="create()">create new equipment</button>
+    <nz-table #listTable [nzData]="data" [nzPageSize]="20" nzSize="small">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model</th>
+                <th>Manufacture Date</th>
+                <th>handel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listTable.data">
+                <td>{{item.id}}</td>
+                <td>{{item.model}}</td>
+                <td>{{item.manufactureDate}}</td>
+                <td>
+                    <button nz-button class="handle-btn" nzType="link" type="button" (click)="showDetail(item)">detail</button>
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <button nz-button class="handle-btn" nzDanger nzType="link" type="button" (click)="delete(item)">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>
